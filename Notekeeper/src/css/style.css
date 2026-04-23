@@ -882,15 +882,13 @@ border-radius: var(--radius-full);
 .theme-btn{
   transition:transform var(--tr-duration-medium) var(--tr-easing-emphasized)
 }
-[data-theme] .theme-btn .dark-icon,.theme-btn .light-icon{
+[data-theme='dark'] .theme-btn .dark-icon,.theme-btn .light-icon{
   display:none;
 }
-[data-theme='dark'] .theme-btn .light-icon{
+[data-theme='dark'] .theme-btn .light-icon{ 
   display: block;
 }
-[data-theme='dark'] .theme-btn .light-icon{
-  display: block;
-}
+
 [data-theme='dark'] .theme-btn{
   transform: rotate(-90deg);
 }

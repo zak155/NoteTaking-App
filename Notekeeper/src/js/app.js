@@ -5,7 +5,7 @@
 'use strict';
 
 /**Module import */
-import { addEventOnElements } from "./utils";
+import { addEventOnElements } from "./utilis.js";
 /**Togle sidebar in small screen */
 /**Html element */
 const $sidebar=document.querySelector('[data-sidebar]');
