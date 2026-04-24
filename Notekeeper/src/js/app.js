@@ -5,7 +5,8 @@
 'use strict';
 
 /**Module import */
-import { addEventOnElements, getGreetingMsg } from "./utilis.js";
+import { addEventOnElements, getGreetingMsg} from "./utilis.js";
+import {Tooltip} from "./components/Tooltip.js"
 /**Togle sidebar in small screen */
 /**Html element */
 const $sidebar=document.querySelector('[data-sidebar]');
@@ -20,10 +21,17 @@ addEventOnElements($sidebarTogglers,'click',function(){
 });
 
 /**
+ * Initialize tooltip behaviour for all DOM 
+ * elements with 'data-tooltip' attribute
+ */
+const $tooltipElems=document.querySelectorAll('[data-tooltip]');
+$tooltipElems.forEach($elem=>Tooltip($elem))
+
+/**
  * show greeting message on homepage
  */
 const $greetElem=document.querySelector('[data-greeting]');
-const current=new Date().getHours();
+const currentHour=new Date().getHours();
 $greetElem.textContent=getGreetingMsg(currentHour);
 
 /**
